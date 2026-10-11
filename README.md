@@ -2,7 +2,7 @@
 
 [仓库目录与构建说明](docs/repository-layout.md)：功能源码在 `src/DaFeiYi/`，测试在 `tests/`，构建和安装工具在 `scripts/`。根目录保留兼容的 `build.ps1`、`verify.ps1` 入口。
 
-**简体中文** | [English](README.en.md)
+**简体中文** | [English](README.en.md) | [日本語](README.ja.md)
 
 陪你读文献、查词和理解公式的 Windows 悬浮翻译工具。选中文字，点击小按钮翻译或解释；也可以选择自动翻译、剪贴板识别或只让肥鱼陪着。
 
