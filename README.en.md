@@ -1,4 +1,6 @@
-# DaFeiYi · 大肥译 🐟
+﻿# DaFeiYi · 大肥译 🐟
+
+[Repository layout and build guide](docs/repository-layout.md): feature source lives in `src/DaFeiYi/`, tests in `tests/`, and build/install tools in `scripts/`. Root `build.ps1` and `verify.ps1` remain compatible entry points.
 
 [简体中文](README.md) | **English**
 

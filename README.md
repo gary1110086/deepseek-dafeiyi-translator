@@ -1,4 +1,6 @@
-# 大肥译 🐟
+﻿# 大肥译 🐟
+
+[仓库目录与构建说明](docs/repository-layout.md)：功能源码在 `src/DaFeiYi/`，测试在 `tests/`，构建和安装工具在 `scripts/`。根目录保留兼容的 `build.ps1`、`verify.ps1` 入口。
 
 **简体中文** | [English](README.en.md)
 

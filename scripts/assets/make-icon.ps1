@@ -1,6 +1,7 @@
 ﻿$ErrorActionPreference='Stop'
+$taskRepoRoot=Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 Add-Type -AssemblyName System.Drawing
-$taskSource=[Drawing.Bitmap]::new((Join-Path $PSScriptRoot 'Assets\Reading\whale-portrait.png'))
+$taskSource=[Drawing.Bitmap]::new((Join-Path $taskRepoRoot 'Assets\Reading\whale-portrait.png'))
 $taskSizes=@(16,24,32,48,64,128,256)
 $taskFrames=[Collections.Generic.List[byte[]]]::new()
 try {
@@ -17,7 +18,7 @@ try {
             $taskFrames.Add($taskMemory.ToArray())
         } finally { $taskMemory.Dispose(); $taskGraphics.Dispose(); $taskBitmap.Dispose() }
     }
-    $taskStream=[IO.File]::Create((Join-Path $PSScriptRoot 'app.ico'))
+    $taskStream=[IO.File]::Create((Join-Path $taskRepoRoot 'src\DaFeiYi\app.ico'))
     $taskWriter=[IO.BinaryWriter]::new($taskStream)
     try {
         $taskWriter.Write([uint16]0); $taskWriter.Write([uint16]1); $taskWriter.Write([uint16]$taskSizes.Count)
@@ -32,5 +33,5 @@ try {
         }
         foreach($taskFrame in $taskFrames) { $taskWriter.Write($taskFrame) }
     } finally { $taskWriter.Dispose(); $taskStream.Dispose() }
-    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'app.ico') -Destination (Join-Path $PSScriptRoot 'Assets\Reading\whale-app.ico') -Force
+    Copy-Item -LiteralPath (Join-Path $taskRepoRoot 'src\DaFeiYi\app.ico') -Destination (Join-Path $taskRepoRoot 'Assets\Reading\whale-app.ico') -Force
 } finally { $taskSource.Dispose() }
