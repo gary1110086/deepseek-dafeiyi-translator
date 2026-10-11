@@ -2,7 +2,7 @@
 
 [Repository layout and build guide](docs/repository-layout.md): feature source lives in `src/DaFeiYi/`, tests in `tests/`, and build/install tools in `scripts/`. Root `build.ps1` and `verify.ps1` remain compatible entry points.
 
-[简体中文](README.md) | **English**
+[简体中文](README.md) | **English** | [日本語](README.ja.md)
 
 A floating translation assistant for Windows, with a little whale companion to keep you company while you read papers, look up terms, and understand equations. Select some text and click the small button to translate or explain it, switch to automatic or clipboard translation, or simply let her stay on your desktop.
 
